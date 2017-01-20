@@ -1,0 +1,390 @@
+
+*** Running xst
+    with args -ifn "HWP3.xst" -ofn "HWP3.srp" -intstyle ise
+
+Reading design: HWP3.prj
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/imports/I2C_zip/i2c_master_bit_ctrl.vhd" into library work
+Parsing entity <i2c_master_bit_ctrl>.
+Parsing architecture <structural> of entity <i2c_master_bit_ctrl>.
+Parsing VHDL file "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/new/FSMachine.vhd" into library work
+Parsing entity <FSMachine>.
+Parsing architecture <Behavioral> of entity <fsmachine>.
+Parsing VHDL file "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/imports/new/Task3TriState.vhd" into library work
+Parsing entity <Task3TriState>.
+Parsing architecture <Behavioral> of entity <task3tristate>.
+Parsing VHDL file "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/imports/new/pwmmodul.vhd" into library work
+Parsing entity <pwmmodul>.
+Parsing architecture <Behavioral> of entity <pwmmodul>.
+Parsing VHDL file "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/imports/I2C_zip/i2c_master_byte_ctrl.vhd" into library work
+Parsing entity <i2c_master_byte_ctrl>.
+Parsing architecture <structural> of entity <i2c_master_byte_ctrl>.
+Parsing VHDL file "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/new/HWP3.vhd" into library work
+Parsing entity <HWP3>.
+Parsing architecture <Behavioral> of entity <hwp3>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <HWP3> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <i2c_master_byte_ctrl> (architecture <structural>) from library <work>.
+
+Elaborating entity <i2c_master_bit_ctrl> (architecture <structural>) from library <work>.
+INFO:HDLCompiler:679 - "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/imports/I2C_zip/i2c_master_bit_ctrl.vhd" Line 561. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/imports/I2C_zip/i2c_master_byte_ctrl.vhd" Line 353. Case statement is complete. others clause is never selected
+
+Elaborating entity <pwmmodul> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Task3TriState> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <FSMachine> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/new/FSMachine.vhd" Line 88. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <HWP3>.
+    Related source file is "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/new/HWP3.vhd".
+INFO:Xst:3210 - "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/new/HWP3.vhd" line 62: Output port <ack_out> of the instance <BYTE_CONTROLLER> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/new/HWP3.vhd" line 62: Output port <i2c_busy> of the instance <BYTE_CONTROLLER> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/new/HWP3.vhd" line 62: Output port <i2c_al> of the instance <BYTE_CONTROLLER> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <HWP3> synthesized.
+
+Synthesizing Unit <i2c_master_byte_ctrl>.
+    Related source file is "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/imports/I2C_zip/i2c_master_byte_ctrl.vhd".
+    Found 3-bit register for signal <dcnt>.
+    Found 3-bit register for signal <statemachine.c_state>.
+    Found 4-bit register for signal <core_cmd>.
+    Found 8-bit register for signal <sr>.
+    Found 1-bit register for signal <core_txd>.
+    Found 1-bit register for signal <shift>.
+    Found 1-bit register for signal <ld>.
+    Found 1-bit register for signal <host_ack>.
+    Found 1-bit register for signal <ack_out>.
+    Found finite state machine <FSM_0> for signal <statemachine.c_state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 26                                             |
+    | Inputs             | 9                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | nReset (negative)                              |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | st_idle                                        |
+    | Power Up State     | st_idle                                        |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit subtractor for signal <GND_5_o_GND_5_o_sub_6_OUT<2:0>> created at line 1308.
+    Found 4-bit 6-to-1 multiplexer for signal <statemachine.c_state[2]_X_5_o_wide_mux_38_OUT> created at line 263.
+    Found 1-bit 3-to-1 multiplexer for signal <statemachine.c_state[1]_GND_5_o_Mux_40_o> created at line 263.
+    Found 1-bit 3-to-1 multiplexer for signal <statemachine.c_state[2]_core_ack_Mux_42_o> created at line 263.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+	inferred  34 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <i2c_master_byte_ctrl> synthesized.
+
+Synthesizing Unit <i2c_master_bit_ctrl>.
+    Related source file is "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/imports/I2C_zip/i2c_master_bit_ctrl.vhd".
+    Found 3-bit register for signal <bus_status_ctrl.fSCL>.
+    Found 3-bit register for signal <bus_status_ctrl.fSDA>.
+    Found 16-bit register for signal <cnt>.
+    Found 2-bit register for signal <bus_status_ctrl.cSCL>.
+    Found 2-bit register for signal <bus_status_ctrl.cSDA>.
+    Found 14-bit register for signal <bus_status_ctrl.filter_cnt>.
+    Found 5-bit register for signal <c_state>.
+    Found 1-bit register for signal <slave_wait>.
+    Found 1-bit register for signal <bus_status_ctrl.sta_condition>.
+    Found 1-bit register for signal <bus_status_ctrl.sto_condition>.
+    Found 1-bit register for signal <bus_status_ctrl.ibusy>.
+    Found 1-bit register for signal <bus_status_ctrl.cmd_stop>.
+    Found 1-bit register for signal <ial>.
+    Found 1-bit register for signal <dout>.
+    Found 1-bit register for signal <cmd_ack>.
+    Found 1-bit register for signal <sda_chk>.
+    Found 1-bit register for signal <dscl_oen>.
+    Found 1-bit register for signal <sSCL>.
+    Found 1-bit register for signal <sSDA>.
+    Found 1-bit register for signal <dSCL>.
+    Found 1-bit register for signal <dSDA>.
+    Found 1-bit register for signal <iscl_oen>.
+    Found 1-bit register for signal <isda_oen>.
+    Found 1-bit register for signal <clk_en>.
+    Found finite state machine <FSM_1> for signal <c_state>.
+    -----------------------------------------------------------------------
+    | States             | 18                                             |
+    | Transitions        | 64                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 11                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | nReset (negative)                              |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit subtractor for signal <GND_6_o_GND_6_o_sub_2_OUT<15:0>> created at line 1308.
+    Found 14-bit subtractor for signal <GND_6_o_GND_6_o_sub_11_OUT<13:0>> created at line 1308.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  57 D-type flip-flop(s).
+	inferred  26 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <i2c_master_bit_ctrl> synthesized.
+
+Synthesizing Unit <pwmmodul>.
+    Related source file is "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/imports/new/pwmmodul.vhd".
+    Found 8-bit register for signal <duty_reg>.
+    Found 8-bit register for signal <counter>.
+    Found 8-bit adder for signal <counter[7]_GND_22_o_add_0_OUT> created at line 1241.
+    Found 8-bit comparator greater for signal <pwm_out> created at line 83
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <pwmmodul> synthesized.
+
+Synthesizing Unit <Task3TriState>.
+    Related source file is "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/imports/new/Task3TriState.vhd".
+    Found 1-bit tristate buffer for signal <sda> created at line 53
+    Found 1-bit tristate buffer for signal <scl> created at line 57
+    Summary:
+	inferred   2 Tristate(s).
+Unit <Task3TriState> synthesized.
+
+Synthesizing Unit <FSMachine>.
+    Related source file is "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/new/FSMachine.vhd".
+    Found 2-bit register for signal <CURRENTSTATE>.
+    Found finite state machine <FSM_2> for signal <CURRENTSTATE>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 10                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | synchronous                                    |
+    | Reset State        | write_address                                  |
+    | Power Up State     | write_address                                  |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <FSMachine> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 14-bit subtractor                                     : 1
+ 16-bit subtractor                                     : 1
+ 3-bit subtractor                                      : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 33
+ 1-bit register                                        : 22
+ 14-bit register                                       : 1
+ 16-bit register                                       : 1
+ 2-bit register                                        : 2
+ 3-bit register                                        : 3
+ 4-bit register                                        : 1
+ 8-bit register                                        : 3
+# Comparators                                          : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 60
+ 1-bit 2-to-1 multiplexer                              : 37
+ 1-bit 3-to-1 multiplexer                              : 2
+ 14-bit 2-to-1 multiplexer                             : 2
+ 16-bit 2-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 2
+ 3-bit 2-to-1 multiplexer                              : 4
+ 4-bit 2-to-1 multiplexer                              : 9
+ 4-bit 6-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 2
+# Tristates                                            : 2
+ 1-bit tristate buffer                                 : 2
+# FSMs                                                 : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <i2c_master_bit_ctrl>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <i2c_master_bit_ctrl> synthesized (advanced).
+
+Synthesizing (advanced) Unit <pwmmodul>.
+The following registers are absorbed into counter <counter[7]_dff_1>: 1 register on signal <counter[7]_dff_1>.
+Unit <pwmmodul> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 14-bit subtractor                                     : 1
+ 3-bit subtractor                                      : 1
+# Counters                                             : 2
+ 16-bit down counter                                   : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 69
+ Flip-Flops                                            : 69
+# Comparators                                          : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 66
+ 1-bit 2-to-1 multiplexer                              : 45
+ 1-bit 3-to-1 multiplexer                              : 2
+ 14-bit 2-to-1 multiplexer                             : 2
+ 2-bit 2-to-1 multiplexer                              : 2
+ 3-bit 2-to-1 multiplexer                              : 4
+ 4-bit 2-to-1 multiplexer                              : 9
+ 4-bit 6-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_2> on signal <CURRENTSTATE[1:2]> with user encoding.
+---------------------------
+ State         | Encoding
+---------------------------
+ write_address | 00
+ command_byte  | 01
+ read_address  | 10
+ get_data      | 11
+---------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <BYTE_CONTROLLER/FSM_0> on signal <statemachine.c_state[1:3]> with user encoding.
+----------------------
+ State    | Encoding
+----------------------
+ st_idle  | 000
+ st_start | 001
+ st_read  | 010
+ st_write | 011
+ st_ack   | 100
+ st_stop  | 101
+----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <BYTE_CONTROLLER/bit_ctrl/FSM_1> on signal <c_state[1:5]> with user encoding.
+---------------------
+ State   | Encoding
+---------------------
+ idle    | 00000
+ start_a | 00001
+ start_b | 00010
+ start_c | 00011
+ start_d | 00100
+ start_e | 00101
+ stop_a  | 00110
+ stop_b  | 00111
+ stop_c  | 01000
+ stop_d  | 01001
+ rd_a    | 01010
+ rd_b    | 01011
+ rd_c    | 01100
+ rd_d    | 01101
+ wr_a    | 01110
+ wr_b    | 01111
+ wr_c    | 10000
+ wr_d    | 10001
+---------------------
+
+Optimizing unit <HWP3> ...
+
+Optimizing unit <i2c_master_byte_ctrl> ...
+
+Optimizing unit <i2c_master_bit_ctrl> ...
+
+Optimizing unit <pwmmodul> ...
+WARNING:Xst:2677 - Node <BYTE_CONTROLLER/ack_out> of sequential type is unconnected in block <HWP3>.
+WARNING:Xst:2677 - Node <BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.sta_condition> of sequential type is unconnected in block <HWP3>.
+WARNING:Xst:2677 - Node <BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.ibusy> of sequential type is unconnected in block <HWP3>.
+WARNING:Xst:1710 - FF/Latch <BYTE_CONTROLLER/bit_ctrl/cnt_15> (without init value) has a constant value of 0 in block <HWP3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BYTE_CONTROLLER/bit_ctrl/cnt_14> (without init value) has a constant value of 0 in block <HWP3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BYTE_CONTROLLER/bit_ctrl/cnt_13> (without init value) has a constant value of 0 in block <HWP3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BYTE_CONTROLLER/bit_ctrl/cnt_12> (without init value) has a constant value of 0 in block <HWP3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BYTE_CONTROLLER/bit_ctrl/cnt_11> (without init value) has a constant value of 0 in block <HWP3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BYTE_CONTROLLER/bit_ctrl/cnt_10> (without init value) has a constant value of 0 in block <HWP3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BYTE_CONTROLLER/bit_ctrl/cnt_9> (without init value) has a constant value of 0 in block <HWP3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BYTE_CONTROLLER/bit_ctrl/cnt_8> (without init value) has a constant value of 0 in block <HWP3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_13> (without init value) has a constant value of 0 in block <HWP3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_12> (without init value) has a constant value of 0 in block <HWP3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_11> (without init value) has a constant value of 0 in block <HWP3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_10> (without init value) has a constant value of 0 in block <HWP3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_9> (without init value) has a constant value of 0 in block <HWP3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_8> (without init value) has a constant value of 0 in block <HWP3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_7> (without init value) has a constant value of 0 in block <HWP3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_6> (without init value) has a constant value of 0 in block <HWP3>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block HWP3, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 84
+ Flip-Flops                                            : 84
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK_66MHZ                          | BUFGP                  | 84    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 4.301ns (Maximum Frequency: 232.504MHz)
+   Minimum input arrival time before clock: 6.366ns
+   Maximum output required time after clock: 8.674ns
+   Maximum combinational path delay: No path found
+
+=========================================================================

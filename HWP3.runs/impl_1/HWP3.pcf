@@ -1,0 +1,77 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Jan 20 22:02:57 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+CONFIG VCCAUX = "3.3";
+COMP "SDA" LOCATE = SITE "F14" LEVEL 1;
+COMP "SCL" LOCATE = SITE "G14" LEVEL 1;
+COMP "LED1" LOCATE = SITE "P4" LEVEL 1;
+COMP "RESET" LOCATE = SITE "V4" LEVEL 1;
+COMP "CLK_66MHZ" LOCATE = SITE "K15" LEVEL 1;
+TIMEGRP CLK_66MHZ = BEL "BYTE_CONTROLLER/statemachine.c_state_FSM_FFd1" BEL
+        "BYTE_CONTROLLER/statemachine.c_state_FSM_FFd2" BEL
+        "BYTE_CONTROLLER/statemachine.c_state_FSM_FFd3" BEL
+        "BYTE_CONTROLLER/dcnt_2" BEL "BYTE_CONTROLLER/dcnt_1" BEL
+        "BYTE_CONTROLLER/dcnt_0" BEL "BYTE_CONTROLLER/ld" BEL
+        "BYTE_CONTROLLER/shift" BEL "BYTE_CONTROLLER/core_txd" BEL
+        "BYTE_CONTROLLER/core_cmd_3" BEL "BYTE_CONTROLLER/core_cmd_2" BEL
+        "BYTE_CONTROLLER/core_cmd_1" BEL "BYTE_CONTROLLER/core_cmd_0" BEL
+        "BYTE_CONTROLLER/host_ack" BEL "BYTE_CONTROLLER/sr_7" BEL
+        "BYTE_CONTROLLER/sr_6" BEL "BYTE_CONTROLLER/sr_5" BEL
+        "BYTE_CONTROLLER/sr_4" BEL "BYTE_CONTROLLER/sr_3" BEL
+        "BYTE_CONTROLLER/sr_2" BEL "BYTE_CONTROLLER/sr_1" BEL
+        "BYTE_CONTROLLER/sr_0" BEL "BYTE_CONTROLLER/bit_ctrl/c_state_FSM_FFd1"
+        BEL "BYTE_CONTROLLER/bit_ctrl/c_state_FSM_FFd2" BEL
+        "BYTE_CONTROLLER/bit_ctrl/c_state_FSM_FFd3" BEL
+        "BYTE_CONTROLLER/bit_ctrl/c_state_FSM_FFd4" BEL
+        "BYTE_CONTROLLER/bit_ctrl/c_state_FSM_FFd5" BEL
+        "BYTE_CONTROLLER/bit_ctrl/cmd_ack" BEL "BYTE_CONTROLLER/bit_ctrl/ial"
+        BEL "BYTE_CONTROLLER/bit_ctrl/dscl_oen" BEL
+        "BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_2" BEL
+        "BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_1" BEL
+        "BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_0" BEL
+        "BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_2" BEL
+        "BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_1" BEL
+        "BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_0" BEL
+        "BYTE_CONTROLLER/bit_ctrl/dSDA" BEL "BYTE_CONTROLLER/bit_ctrl/dSCL"
+        BEL "BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_5" BEL
+        "BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_4" BEL
+        "BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_3" BEL
+        "BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_2" BEL
+        "BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_1" BEL
+        "BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_0" BEL
+        "BYTE_CONTROLLER/bit_ctrl/sSDA" BEL "BYTE_CONTROLLER/bit_ctrl/sSCL"
+        BEL "BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.sto_condition" BEL
+        "BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.cSDA_1" BEL
+        "BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.cSDA_0" BEL
+        "BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.cSCL_1" BEL
+        "BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.cSCL_0" BEL
+        "BYTE_CONTROLLER/bit_ctrl/clk_en" BEL
+        "BYTE_CONTROLLER/bit_ctrl/slave_wait" BEL
+        "BYTE_CONTROLLER/bit_ctrl/isda_oen" BEL
+        "BYTE_CONTROLLER/bit_ctrl/sda_chk" BEL
+        "BYTE_CONTROLLER/bit_ctrl/iscl_oen" BEL
+        "BYTE_CONTROLLER/bit_ctrl/dout" BEL
+        "BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.cmd_stop" BEL
+        "BYTE_CONTROLLER/bit_ctrl/cnt_7" BEL "BYTE_CONTROLLER/bit_ctrl/cnt_6"
+        BEL "BYTE_CONTROLLER/bit_ctrl/cnt_5" BEL
+        "BYTE_CONTROLLER/bit_ctrl/cnt_4" BEL "BYTE_CONTROLLER/bit_ctrl/cnt_3"
+        BEL "BYTE_CONTROLLER/bit_ctrl/cnt_2" BEL
+        "BYTE_CONTROLLER/bit_ctrl/cnt_1" BEL "BYTE_CONTROLLER/bit_ctrl/cnt_0"
+        BEL "PWM_MODUL/counter[7]_dff_1_7" BEL "PWM_MODUL/counter[7]_dff_1_6"
+        BEL "PWM_MODUL/counter[7]_dff_1_5" BEL "PWM_MODUL/counter[7]_dff_1_4"
+        BEL "PWM_MODUL/counter[7]_dff_1_3" BEL "PWM_MODUL/counter[7]_dff_1_2"
+        BEL "PWM_MODUL/counter[7]_dff_1_1" BEL "PWM_MODUL/counter[7]_dff_1_0"
+        BEL "PWM_MODUL/duty_reg[7]_dff_3_7" BEL
+        "PWM_MODUL/duty_reg[7]_dff_3_6" BEL "PWM_MODUL/duty_reg[7]_dff_3_5"
+        BEL "PWM_MODUL/duty_reg[7]_dff_3_4" BEL
+        "PWM_MODUL/duty_reg[7]_dff_3_3" BEL "PWM_MODUL/duty_reg[7]_dff_3_2"
+        BEL "PWM_MODUL/duty_reg[7]_dff_3_1" BEL
+        "PWM_MODUL/duty_reg[7]_dff_3_0" BEL
+        "Finite_State_Machine/CURRENTSTATE_FSM_FFd2" BEL
+        "Finite_State_Machine/CURRENTSTATE_FSM_FFd1" BEL
+        "CLK_66MHZ_BUFGP/BUFG";
+TS_CLK_66MHZ = PERIOD TIMEGRP "CLK_66MHZ" 15 ns HIGH 50% INPUT_JITTER 1 ns;
+SCHEMATIC END;
+

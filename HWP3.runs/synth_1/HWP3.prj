@@ -1,0 +1,6 @@
+vhdl work "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/imports/I2C_zip/i2c_master_bit_ctrl.vhd"
+vhdl work "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/new/FSMachine.vhd"
+vhdl work "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/imports/new/Task3TriState.vhd"
+vhdl work "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/imports/new/pwmmodul.vhd"
+vhdl work "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/imports/I2C_zip/i2c_master_byte_ctrl.vhd"
+vhdl work "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.srcs/sources_1/new/HWP3.vhd"

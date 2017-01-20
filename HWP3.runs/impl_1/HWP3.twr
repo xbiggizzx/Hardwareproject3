@@ -1,0 +1,1418 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -o HWP3.twr
+-v 30 -l 30 HWP3_routed.ncd HWP3.pcf
+
+Design file:              HWP3_routed.ncd
+Physical constraint file: HWP3.pcf
+Device,package,speed:     xc6slx9,csg324,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report, limited to 30 items per constraint
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_CLK_66MHZ = PERIOD TIMEGRP "CLK_66MHZ" 15 ns HIGH 50% 
+INPUT_JITTER 1 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 704 paths analyzed, 308 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   4.793ns.
+--------------------------------------------------------------------------------
+Slack:                  10.207ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_4 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_0 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      4.235ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_4 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.CMUX     Tshcko                0.518   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_4
+    SLICE_X7Y27.A2       net (fanout=2)        0.755   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[4]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.408   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_0
+    -------------------------------------------------  ---------------------------
+    Total                                      4.235ns (1.522ns logic, 2.713ns route)
+                                                       (35.9% logic, 64.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.208ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_4 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_2 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      4.234ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_4 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.CMUX     Tshcko                0.518   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_4
+    SLICE_X7Y27.A2       net (fanout=2)        0.755   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[4]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.407   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.234ns (1.521ns logic, 2.713ns route)
+                                                       (35.9% logic, 64.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.212ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_4 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_1 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      4.230ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_4 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.CMUX     Tshcko                0.518   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_4
+    SLICE_X7Y27.A2       net (fanout=2)        0.755   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[4]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.403   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.230ns (1.517ns logic, 2.713ns route)
+                                                       (35.9% logic, 64.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.225ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_4 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_2 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      4.217ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_4 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.CMUX     Tshcko                0.518   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_4
+    SLICE_X7Y27.A2       net (fanout=2)        0.755   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[4]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.390   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.217ns (1.504ns logic, 2.713ns route)
+                                                       (35.7% logic, 64.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.233ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_4 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_1 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      4.209ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_4 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.CMUX     Tshcko                0.518   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_4
+    SLICE_X7Y27.A2       net (fanout=2)        0.755   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[4]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.382   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.209ns (1.496ns logic, 2.713ns route)
+                                                       (35.5% logic, 64.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.241ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_5 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_0 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      4.201ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_5 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.DQ       Tcko                  0.430   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_5
+    SLICE_X7Y27.A6       net (fanout=2)        0.809   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.408   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_0
+    -------------------------------------------------  ---------------------------
+    Total                                      4.201ns (1.434ns logic, 2.767ns route)
+                                                       (34.1% logic, 65.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.242ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_5 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_2 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      4.200ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_5 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.DQ       Tcko                  0.430   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_5
+    SLICE_X7Y27.A6       net (fanout=2)        0.809   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.407   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.200ns (1.433ns logic, 2.767ns route)
+                                                       (34.1% logic, 65.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.246ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_5 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_1 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      4.196ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_5 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.DQ       Tcko                  0.430   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_5
+    SLICE_X7Y27.A6       net (fanout=2)        0.809   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.403   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.196ns (1.429ns logic, 2.767ns route)
+                                                       (34.1% logic, 65.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.250ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_4 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_0 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      4.192ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_4 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.CMUX     Tshcko                0.518   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_4
+    SLICE_X7Y27.A2       net (fanout=2)        0.755   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[4]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.365   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_0
+    -------------------------------------------------  ---------------------------
+    Total                                      4.192ns (1.479ns logic, 2.713ns route)
+                                                       (35.3% logic, 64.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.259ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_5 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_2 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      4.183ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_5 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.DQ       Tcko                  0.430   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_5
+    SLICE_X7Y27.A6       net (fanout=2)        0.809   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.390   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.183ns (1.416ns logic, 2.767ns route)
+                                                       (33.9% logic, 66.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.267ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_5 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_1 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      4.175ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_5 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.DQ       Tcko                  0.430   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_5
+    SLICE_X7Y27.A6       net (fanout=2)        0.809   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.382   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.175ns (1.408ns logic, 2.767ns route)
+                                                       (33.7% logic, 66.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.284ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_5 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_0 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      4.158ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_5 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.DQ       Tcko                  0.430   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_5
+    SLICE_X7Y27.A6       net (fanout=2)        0.809   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.365   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_0
+    -------------------------------------------------  ---------------------------
+    Total                                      4.158ns (1.391ns logic, 2.767ns route)
+                                                       (33.5% logic, 66.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.500ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_0 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_0 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      3.942ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_0 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.BQ       Tcko                  0.430   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_0
+    SLICE_X7Y27.A1       net (fanout=2)        0.550   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[0]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.408   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.942ns (1.434ns logic, 2.508ns route)
+                                                       (36.4% logic, 63.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.501ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_0 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_2 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      3.941ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_0 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.BQ       Tcko                  0.430   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_0
+    SLICE_X7Y27.A1       net (fanout=2)        0.550   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[0]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.407   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.941ns (1.433ns logic, 2.508ns route)
+                                                       (36.4% logic, 63.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.505ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_0 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_1 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      3.937ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_0 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.BQ       Tcko                  0.430   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_0
+    SLICE_X7Y27.A1       net (fanout=2)        0.550   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[0]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.403   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.937ns (1.429ns logic, 2.508ns route)
+                                                       (36.3% logic, 63.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.518ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_0 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_2 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      3.924ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_0 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.BQ       Tcko                  0.430   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_0
+    SLICE_X7Y27.A1       net (fanout=2)        0.550   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[0]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.390   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.924ns (1.416ns logic, 2.508ns route)
+                                                       (36.1% logic, 63.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.526ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_0 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_1 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      3.916ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_0 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.BQ       Tcko                  0.430   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_0
+    SLICE_X7Y27.A1       net (fanout=2)        0.550   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[0]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.382   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.916ns (1.408ns logic, 2.508ns route)
+                                                       (36.0% logic, 64.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.543ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_0 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_0 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      3.899ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_0 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.BQ       Tcko                  0.430   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_0
+    SLICE_X7Y27.A1       net (fanout=2)        0.550   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[0]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.365   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.899ns (1.391ns logic, 2.508ns route)
+                                                       (35.7% logic, 64.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.594ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_3 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_0 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      3.848ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_3 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.BMUX     Tshcko                0.518   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_3
+    SLICE_X7Y27.A3       net (fanout=2)        0.368   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[3]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.408   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.848ns (1.522ns logic, 2.326ns route)
+                                                       (39.6% logic, 60.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.595ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_3 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_2 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      3.847ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_3 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.BMUX     Tshcko                0.518   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_3
+    SLICE_X7Y27.A3       net (fanout=2)        0.368   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[3]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.407   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.847ns (1.521ns logic, 2.326ns route)
+                                                       (39.5% logic, 60.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.599ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_3 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_1 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      3.843ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_3 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.BMUX     Tshcko                0.518   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_3
+    SLICE_X7Y27.A3       net (fanout=2)        0.368   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[3]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.403   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.843ns (1.517ns logic, 2.326ns route)
+                                                       (39.5% logic, 60.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.612ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_3 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_2 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      3.830ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_3 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.BMUX     Tshcko                0.518   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_3
+    SLICE_X7Y27.A3       net (fanout=2)        0.368   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[3]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.390   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.830ns (1.504ns logic, 2.326ns route)
+                                                       (39.3% logic, 60.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.620ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_3 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_1 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      3.822ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_3 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.BMUX     Tshcko                0.518   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_3
+    SLICE_X7Y27.A3       net (fanout=2)        0.368   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[3]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.382   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.822ns (1.496ns logic, 2.326ns route)
+                                                       (39.1% logic, 60.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.621ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/statemachine.c_state_FSM_FFd1 (FF)
+  Destination:          BYTE_CONTROLLER/core_cmd_2 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      3.869ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.009ns (0.195 - 0.204)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/statemachine.c_state_FSM_FFd1 to BYTE_CONTROLLER/core_cmd_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y19.AQ      Tcko                  0.476   BYTE_CONTROLLER/statemachine.c_state_FSM_FFd2
+                                                       BYTE_CONTROLLER/statemachine.c_state_FSM_FFd1
+    SLICE_X14Y22.C3      net (fanout=14)       0.841   BYTE_CONTROLLER/statemachine.c_state_FSM_FFd1
+    SLICE_X14Y22.C       Tilo                  0.235   BYTE_CONTROLLER/ld
+                                                       BYTE_CONTROLLER/Mmux_statemachine.c_state[2]_GND_5_o_mux_44_OUT1111
+    SLICE_X14Y18.C1      net (fanout=4)        0.996   BYTE_CONTROLLER/Mmux_statemachine.c_state[2]_GND_5_o_mux_44_OUT111
+    SLICE_X14Y18.CMUX    Tilo                  0.403   BYTE_CONTROLLER/statemachine.c_state_FSM_FFd3
+                                                       BYTE_CONTROLLER/Mmux_statemachine.c_state[2]_GND_5_o_mux_44_OUT82_SW0_G
+                                                       BYTE_CONTROLLER/Mmux_statemachine.c_state[2]_GND_5_o_mux_44_OUT82_SW0
+    SLICE_X15Y18.B1      net (fanout=1)        0.545   BYTE_CONTROLLER/N23
+    SLICE_X15Y18.CLK     Tas                   0.373   BYTE_CONTROLLER/core_cmd[3]
+                                                       BYTE_CONTROLLER/Mmux_statemachine.c_state[2]_GND_5_o_mux_44_OUT83
+                                                       BYTE_CONTROLLER/core_cmd_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.869ns (1.487ns logic, 2.382ns route)
+                                                       (38.4% logic, 61.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.637ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_3 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_0 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      3.805ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_3 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.BMUX     Tshcko                0.518   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_3
+    SLICE_X7Y27.A3       net (fanout=2)        0.368   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[3]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.365   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.805ns (1.479ns logic, 2.326ns route)
+                                                       (38.9% logic, 61.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.723ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_1 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_0 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      3.719ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_1 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.DMUX     Tshcko                0.518   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_1
+    SLICE_X7Y27.A5       net (fanout=2)        0.239   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[1]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.408   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.719ns (1.522ns logic, 2.197ns route)
+                                                       (40.9% logic, 59.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.724ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_1 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_2 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      3.718ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_1 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.DMUX     Tshcko                0.518   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_1
+    SLICE_X7Y27.A5       net (fanout=2)        0.239   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[1]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.407   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.718ns (1.521ns logic, 2.197ns route)
+                                                       (40.9% logic, 59.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.728ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_1 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_1 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      3.714ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_1 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.DMUX     Tshcko                0.518   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_1
+    SLICE_X7Y27.A5       net (fanout=2)        0.239   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[1]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.403   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.714ns (1.517ns logic, 2.197ns route)
+                                                       (40.8% logic, 59.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.741ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_1 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_2 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      3.701ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_1 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.DMUX     Tshcko                0.518   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_1
+    SLICE_X7Y27.A5       net (fanout=2)        0.239   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[1]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.390   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSCL_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.701ns (1.504ns logic, 2.197ns route)
+                                                       (40.6% logic, 59.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.742ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_2 (FF)
+  Destination:          BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_0 (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      3.700ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.057ns (0.598 - 0.655)
+  Source Clock:         CLK_66MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_66MHZ_BUFGP rising at 15.000ns
+  Clock Uncertainty:    0.501ns
+
+  Clock Uncertainty:          0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   1.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_2 to BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y27.CQ       Tcko                  0.430   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt_2
+    SLICE_X7Y27.A4       net (fanout=2)        0.308   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[2]
+    SLICE_X7Y27.A        Tilo                  0.259   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[5]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o<13>1
+    SLICE_X15Y28.B1      net (fanout=4)        1.233   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.filter_cnt[13]_GND_6_o_equal_10_o
+    SLICE_X15Y28.BMUX    Tilo                  0.337   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/_n0166_inv1
+    SLICE_X15Y28.CE      net (fanout=1)        0.725   BYTE_CONTROLLER/bit_ctrl/_n0166_inv
+    SLICE_X15Y28.CLK     Tceck                 0.408   BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA[1]
+                                                       BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.fSDA_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.700ns (1.434ns logic, 2.266ns route)
+                                                       (38.8% logic, 61.2% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_CLK_66MHZ = PERIOD TIMEGRP "CLK_66MHZ" 15 ns HIGH 50% INPUT_JITTER 1 ns;
+--------------------------------------------------------------------------------
+Slack: 12.334ns (period - min period limit)
+  Period: 15.000ns
+  Min period limit: 2.666ns (375.094MHz) (Tbcper_I)
+  Physical resource: CLK_66MHZ_BUFGP/BUFG/I0
+  Logical resource: CLK_66MHZ_BUFGP/BUFG/I0
+  Location pin: BUFGMUX_X2Y3.I0
+  Clock network: CLK_66MHZ_BUFGP/IBUFG
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - min period limit)
+  Period: 15.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: PWM_MODUL/duty_reg[7]_dff_3[3]/CLK
+  Logical resource: PWM_MODUL/duty_reg[7]_dff_3_0/CK
+  Location pin: SLICE_X12Y13.CLK
+  Clock network: CLK_66MHZ_BUFGP
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 15.000ns
+  High pulse: 7.500ns
+  High pulse limit: 0.240ns (Trpw)
+  Physical resource: PWM_MODUL/duty_reg[7]_dff_3[3]/SR
+  Logical resource: PWM_MODUL/duty_reg[7]_dff_3_0/SR
+  Location pin: SLICE_X12Y13.SR
+  Clock network: nReset_inv
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - min period limit)
+  Period: 15.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: PWM_MODUL/duty_reg[7]_dff_3[3]/CLK
+  Logical resource: PWM_MODUL/duty_reg[7]_dff_3_1/CK
+  Location pin: SLICE_X12Y13.CLK
+  Clock network: CLK_66MHZ_BUFGP
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 15.000ns
+  High pulse: 7.500ns
+  High pulse limit: 0.240ns (Trpw)
+  Physical resource: PWM_MODUL/duty_reg[7]_dff_3[3]/SR
+  Logical resource: PWM_MODUL/duty_reg[7]_dff_3_1/SR
+  Location pin: SLICE_X12Y13.SR
+  Clock network: nReset_inv
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - min period limit)
+  Period: 15.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: PWM_MODUL/duty_reg[7]_dff_3[3]/CLK
+  Logical resource: PWM_MODUL/duty_reg[7]_dff_3_2/CK
+  Location pin: SLICE_X12Y13.CLK
+  Clock network: CLK_66MHZ_BUFGP
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 15.000ns
+  High pulse: 7.500ns
+  High pulse limit: 0.240ns (Trpw)
+  Physical resource: PWM_MODUL/duty_reg[7]_dff_3[3]/SR
+  Logical resource: PWM_MODUL/duty_reg[7]_dff_3_2/SR
+  Location pin: SLICE_X12Y13.SR
+  Clock network: nReset_inv
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - min period limit)
+  Period: 15.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: PWM_MODUL/duty_reg[7]_dff_3[3]/CLK
+  Logical resource: PWM_MODUL/duty_reg[7]_dff_3_3/CK
+  Location pin: SLICE_X12Y13.CLK
+  Clock network: CLK_66MHZ_BUFGP
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 15.000ns
+  High pulse: 7.500ns
+  High pulse limit: 0.240ns (Trpw)
+  Physical resource: PWM_MODUL/duty_reg[7]_dff_3[3]/SR
+  Logical resource: PWM_MODUL/duty_reg[7]_dff_3_3/SR
+  Location pin: SLICE_X12Y13.SR
+  Clock network: nReset_inv
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - min period limit)
+  Period: 15.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: cmd_ack/CLK
+  Logical resource: BYTE_CONTROLLER/host_ack/CK
+  Location pin: SLICE_X12Y18.CLK
+  Clock network: CLK_66MHZ_BUFGP
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 15.000ns
+  High pulse: 7.500ns
+  High pulse limit: 0.240ns (Trpw)
+  Physical resource: cmd_ack/SR
+  Logical resource: BYTE_CONTROLLER/host_ack/SR
+  Location pin: SLICE_X12Y18.SR
+  Clock network: nReset_inv
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - min period limit)
+  Period: 15.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: BYTE_CONTROLLER/core_cmd[1]/CLK
+  Logical resource: BYTE_CONTROLLER/core_cmd_0/CK
+  Location pin: SLICE_X12Y19.CLK
+  Clock network: CLK_66MHZ_BUFGP
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 15.000ns
+  High pulse: 7.500ns
+  High pulse limit: 0.240ns (Trpw)
+  Physical resource: BYTE_CONTROLLER/core_cmd[1]/SR
+  Logical resource: BYTE_CONTROLLER/core_cmd_0/SR
+  Location pin: SLICE_X12Y19.SR
+  Clock network: nReset_inv
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - min period limit)
+  Period: 15.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: BYTE_CONTROLLER/core_cmd[1]/CLK
+  Logical resource: BYTE_CONTROLLER/core_cmd_1/CK
+  Location pin: SLICE_X12Y19.CLK
+  Clock network: CLK_66MHZ_BUFGP
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 15.000ns
+  High pulse: 7.500ns
+  High pulse limit: 0.240ns (Trpw)
+  Physical resource: BYTE_CONTROLLER/core_cmd[1]/SR
+  Logical resource: BYTE_CONTROLLER/core_cmd_1/SR
+  Location pin: SLICE_X12Y19.SR
+  Clock network: nReset_inv
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - min period limit)
+  Period: 15.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.cmd_stop/CLK
+  Logical resource: BYTE_CONTROLLER/bit_ctrl/sda_chk/CK
+  Location pin: SLICE_X12Y22.CLK
+  Clock network: CLK_66MHZ_BUFGP
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 15.000ns
+  High pulse: 7.500ns
+  High pulse limit: 0.240ns (Trpw)
+  Physical resource: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.cmd_stop/SR
+  Logical resource: BYTE_CONTROLLER/bit_ctrl/sda_chk/SR
+  Location pin: SLICE_X12Y22.SR
+  Clock network: nReset_inv
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - min period limit)
+  Period: 15.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.cmd_stop/CLK
+  Logical resource: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.cmd_stop/CK
+  Location pin: SLICE_X12Y22.CLK
+  Clock network: CLK_66MHZ_BUFGP
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 15.000ns
+  High pulse: 7.500ns
+  High pulse limit: 0.240ns (Trpw)
+  Physical resource: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.cmd_stop/SR
+  Logical resource: BYTE_CONTROLLER/bit_ctrl/bus_status_ctrl.cmd_stop/SR
+  Location pin: SLICE_X12Y22.SR
+  Clock network: nReset_inv
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - min period limit)
+  Period: 15.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: sda_en/CLK
+  Logical resource: BYTE_CONTROLLER/bit_ctrl/isda_oen/CK
+  Location pin: SLICE_X12Y23.CLK
+  Clock network: CLK_66MHZ_BUFGP
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 15.000ns
+  High pulse: 7.500ns
+  High pulse limit: 0.240ns (Trpw)
+  Physical resource: sda_en/SR
+  Logical resource: BYTE_CONTROLLER/bit_ctrl/isda_oen/SR
+  Location pin: SLICE_X12Y23.SR
+  Clock network: nReset_inv
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - min period limit)
+  Period: 15.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: BYTE_CONTROLLER/bit_ctrl/c_state_FSM_FFd2/CLK
+  Logical resource: BYTE_CONTROLLER/bit_ctrl/c_state_FSM_FFd1/CK
+  Location pin: SLICE_X12Y25.CLK
+  Clock network: CLK_66MHZ_BUFGP
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 15.000ns
+  High pulse: 7.500ns
+  High pulse limit: 0.240ns (Trpw)
+  Physical resource: BYTE_CONTROLLER/bit_ctrl/c_state_FSM_FFd2/SR
+  Logical resource: BYTE_CONTROLLER/bit_ctrl/c_state_FSM_FFd1/SR
+  Location pin: SLICE_X12Y25.SR
+  Clock network: nReset_inv
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - min period limit)
+  Period: 15.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: BYTE_CONTROLLER/bit_ctrl/c_state_FSM_FFd2/CLK
+  Logical resource: BYTE_CONTROLLER/bit_ctrl/sSCL/CK
+  Location pin: SLICE_X12Y25.CLK
+  Clock network: CLK_66MHZ_BUFGP
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 15.000ns
+  High pulse: 7.500ns
+  High pulse limit: 0.240ns (Trpw)
+  Physical resource: BYTE_CONTROLLER/bit_ctrl/c_state_FSM_FFd2/SR
+  Logical resource: BYTE_CONTROLLER/bit_ctrl/sSCL/SR
+  Location pin: SLICE_X12Y25.SR
+  Clock network: nReset_inv
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - min period limit)
+  Period: 15.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: BYTE_CONTROLLER/bit_ctrl/c_state_FSM_FFd2/CLK
+  Logical resource: BYTE_CONTROLLER/bit_ctrl/c_state_FSM_FFd2/CK
+  Location pin: SLICE_X12Y25.CLK
+  Clock network: CLK_66MHZ_BUFGP
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 15.000ns
+  High pulse: 7.500ns
+  High pulse limit: 0.240ns (Trpw)
+  Physical resource: BYTE_CONTROLLER/bit_ctrl/c_state_FSM_FFd2/SR
+  Logical resource: BYTE_CONTROLLER/bit_ctrl/c_state_FSM_FFd2/SR
+  Location pin: SLICE_X12Y25.SR
+  Clock network: nReset_inv
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - min period limit)
+  Period: 15.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: BYTE_CONTROLLER/core_rxd/CLK
+  Logical resource: BYTE_CONTROLLER/bit_ctrl/dout/CK
+  Location pin: SLICE_X16Y22.CLK
+  Clock network: CLK_66MHZ_BUFGP
+--------------------------------------------------------------------------------
+Slack: 14.520ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 15.000ns
+  High pulse: 7.500ns
+  High pulse limit: 0.240ns (Trpw)
+  Physical resource: BYTE_CONTROLLER/core_rxd/SR
+  Logical resource: BYTE_CONTROLLER/bit_ctrl/dout/SR
+  Location pin: SLICE_X16Y22.SR
+  Clock network: nReset_inv
+--------------------------------------------------------------------------------
+Slack: 14.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 15.000ns
+  High pulse: 7.500ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: PWM_MODUL/counter[7]_dff_1[3]/SR
+  Logical resource: PWM_MODUL/counter[7]_dff_1_0/SR
+  Location pin: SLICE_X10Y12.SR
+  Clock network: nReset_inv
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CLK_66MHZ
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_66MHZ      |    4.793|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 704 paths, 0 nets, and 503 connections
+
+Design statistics:
+   Minimum period:   4.793ns{1}   (Maximum frequency: 208.638MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Fri Jan 20 22:03:06 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 218 MB
+
+
+

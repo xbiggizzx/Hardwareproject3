@@ -1,0 +1,1 @@
+-intstyle "pa" -incremental -L "work" -L "secureip" -o "mips_top_testbench.exe" --prj "C:/Users/klaus_000/Documents/FPGAProjekt/HWP3/HWP3.sim/sim_1/behav/mips_top_testbench.prj" -top "work.mips_top_testbench" 

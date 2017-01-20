@@ -1,0 +1,8 @@
+INTSTYLE=pa
+INFILE=C:\Users\klaus_000\Documents\FPGAProjekt\HWP3\HWP3.runs\impl_1\HWP3_routed.ncd
+OUTFILE=C:\Users\klaus_000\Documents\FPGAProjekt\HWP3\HWP3.runs\impl_1\HWP3.bit
+FAMILY=Spartan6
+PART=xc6slx9-2csg324
+WORKINGDIR=C:\Users\klaus_000\Documents\FPGAProjekt\HWP3\HWP3.runs\impl_1
+LICENSE=WebPack
+USER_INFO=211263337_0_0_312
